@@ -1,0 +1,39 @@
+{
+  "profiles": {
+    "communication/send-email": {
+      "version": "1.1.0",
+      "providers": {
+        "sendgrid": {},
+        "postmark": {}
+      },
+      "priority": [
+        "sendgrid",
+        "postmark"
+      ],
+      "defaults": {
+        "SendEmail": {
+          "retryPolicy": "circuit-breaker",
+          "providerFailover": true
+        }}
+
+    }
+  },
+  "providers": {
+    "sendgrid": {
+      "security": [
+        {
+          "id": "bearer_token",
+          "token": "$SENDGRID_TOKEN"
+        }
+      ]
+    },
+    "postmark": {
+      "security": [
+        {
+          "id": "server_token",
+          "apikey": "$POSTMARK_API_KEY"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,401 @@
+{
+  "kind": "ProfileDocument",
+  "header": {
+    "kind": "ProfileHeader",
+    "scope": "communication",
+    "name": "send-email",
+    "version": {
+      "major": 1,
+      "minor": 1,
+      "patch": 0
+    },
+    "location": {
+      "line": 1,
+      "column": 1
+    },
+    "span": {
+      "start": 0,
+      "end": 100
+    },
+    "title": "Send Email",
+    "description": "Send one transactional email"
+  },
+  "definitions": [
+    {
+      "kind": "UseCaseDefinition",
+      "useCaseName": "SendEmail",
+      "safety": "unsafe",
+      "input": {
+        "kind": "UseCaseSlotDefinition",
+        "type": {
+          "kind": "ObjectDefinition",
+          "fields": [
+            {
+              "kind": "FieldDefinition",
+              "fieldName": "from",
+              "required": true,
+              "location": {
+                "line": 16,
+                "column": 5
+              },
+              "span": {
+                "start": 244,
+                "end": 249
+              }
+            },
+            {
+              "kind": "FieldDefinition",
+              "fieldName": "to",
+              "required": true,
+              "location": {
+                "line": 17,
+                "column": 5
+              },
+              "span": {
+                "start": 254,
+                "end": 257
+              }
+            },
+            {
+              "kind": "FieldDefinition",
+              "fieldName": "subject",
+              "required": true,
+              "location": {
+                "line": 18,
+                "column": 5
+              },
+              "span": {
+                "start": 262,
+                "end": 270
+              }
+            },
+            {
+              "kind": "FieldDefinition",
+              "fieldName": "text",
+              "required": false,
+              "location": {
+                "line": 19,
+                "column": 5
+              },
+              "span": {
+                "start": 275,
+                "end": 279
+              }
+            },
+            {
+              "kind": "FieldDefinition",
+              "fieldName": "html",
+              "required": false,
+              "location": {
+                "line": 20,
+                "column": 5
+              },
+              "span": {
+                "start": 284,
+                "end": 288
+              }
+            }
+          ],
+          "location": {
+            "line": 15,
+            "column": 9
+          },
+          "span": {
+            "start": 238,
+            "end": 292
+          }
+        },
+        "location": {
+          "line": 15,
+          "column": 3
+        },
+        "span": {
+          "start": 232,
+          "end": 292
+        }
+      },
+      "result": {
+        "kind": "UseCaseSlotDefinition",
+        "type": {
+          "kind": "ObjectDefinition",
+          "fields": [
+            {
+              "kind": "FieldDefinition",
+              "fieldName": "messageId",
+              "required": false,
+              "location": {
+                "line": 24,
+                "column": 5
+              },
+              "span": {
+                "start": 309,
+                "end": 318
+              }
+            }
+          ],
+          "location": {
+            "line": 23,
+            "column": 10
+          },
+          "span": {
+            "start": 303,
+            "end": 322
+          }
+        },
+        "location": {
+          "line": 23,
+          "column": 3
+        },
+        "span": {
+          "start": 296,
+          "end": 322
+        }
+      },
+      "error": {
+        "kind": "UseCaseSlotDefinition",
+        "type": {
+          "kind": "ModelTypeName",
+          "name": "Error",
+          "location": {
+            "line": 27,
+            "column": 9
+          },
+          "span": {
+            "start": 332,
+            "end": 337
+          }
+        },
+        "location": {
+          "line": 27,
+          "column": 3
+        },
+        "span": {
+          "start": 326,
+          "end": 337
+        }
+      },
+      "location": {
+        "line": 9,
+        "column": 1
+      },
+      "span": {
+        "start": 102,
+        "end": 339
+      },
+      "title": "Send transactional email to one recipient",
+      "description": "Email can contain text and/or html representation"
+    },
+    {
+      "kind": "UseCaseDefinition",
+      "useCaseName": "SendTemplatedEmail",
+      "safety": "unsafe",
+      "input": {
+        "kind": "UseCaseSlotDefinition",
+        "type": {
+          "kind": "ObjectDefinition",
+          "fields": [
+            {
+              "kind": "FieldDefinition",
+              "fieldName": "from",
+              "required": true,
+              "location": {
+                "line": 37,
+                "column": 5
+              },
+              "span": {
+                "start": 497,
+                "end": 502
+              }
+            },
+            {
+              "kind": "FieldDefinition",
+              "fieldName": "to",
+              "required": true,
+              "location": {
+                "line": 38,
+                "column": 5
+              },
+              "span": {
+                "start": 507,
+                "end": 510
+              }
+            },
+            {
+              "kind": "FieldDefinition",
+              "fieldName": "templateId",
+              "required": true,
+              "location": {
+                "line": 39,
+                "column": 5
+              },
+              "span": {
+                "start": 515,
+                "end": 526
+              }
+            },
+            {
+              "kind": "FieldDefinition",
+              "fieldName": "templateData",
+              "required": true,
+              "location": {
+                "line": 40,
+                "column": 5
+              },
+              "span": {
+                "start": 531,
+                "end": 544
+              }
+            }
+          ],
+          "location": {
+            "line": 36,
+            "column": 9
+          },
+          "span": {
+            "start": 491,
+            "end": 548
+          }
+        },
+        "location": {
+          "line": 36,
+          "column": 3
+        },
+        "span": {
+          "start": 485,
+          "end": 548
+        }
+      },
+      "result": {
+        "kind": "UseCaseSlotDefinition",
+        "type": {
+          "kind": "ObjectDefinition",
+          "fields": [
+            {
+              "kind": "FieldDefinition",
+              "fieldName": "messageId",
+              "required": false,
+              "location": {
+                "line": 44,
+                "column": 5
+              },
+              "span": {
+                "start": 565,
+                "end": 574
+              }
+            }
+          ],
+          "location": {
+            "line": 43,
+            "column": 10
+          },
+          "span": {
+            "start": 559,
+            "end": 578
+          }
+        },
+        "location": {
+          "line": 43,
+          "column": 3
+        },
+        "span": {
+          "start": 552,
+          "end": 578
+        }
+      },
+      "error": {
+        "kind": "UseCaseSlotDefinition",
+        "type": {
+          "kind": "ModelTypeName",
+          "name": "Error",
+          "location": {
+            "line": 47,
+            "column": 9
+          },
+          "span": {
+            "start": 588,
+            "end": 593
+          }
+        },
+        "location": {
+          "line": 47,
+          "column": 3
+        },
+        "span": {
+          "start": 582,
+          "end": 593
+        }
+      },
+      "location": {
+        "line": 30,
+        "column": 1
+      },
+      "span": {
+        "start": 341,
+        "end": 595
+      },
+      "title": "Send templated transactional email to one recipient",
+      "description": "Requires template defined on provider side."
+    },
+    {
+      "kind": "NamedModelDefinition",
+      "modelName": "Error",
+      "type": {
+        "kind": "ObjectDefinition",
+        "fields": [
+          {
+            "kind": "FieldDefinition",
+            "fieldName": "title",
+            "required": false,
+            "location": {
+              "line": 51,
+              "column": 3
+            },
+            "span": {
+              "start": 613,
+              "end": 681
+            },
+            "title": "A short, human-readable summary of the problem type."
+          },
+          {
+            "kind": "FieldDefinition",
+            "fieldName": "detail",
+            "required": false,
+            "location": {
+              "line": 55,
+              "column": 3
+            },
+            "span": {
+              "start": 684,
+              "end": 773
+            },
+            "title": "A human-readable explanation specific to this occurrence of the problem."
+          }
+        ],
+        "location": {
+          "line": 50,
+          "column": 13
+        },
+        "span": {
+          "start": 609,
+          "end": 775
+        }
+      },
+      "location": {
+        "line": 50,
+        "column": 1
+      },
+      "span": {
+        "start": 597,
+        "end": 775
+      }
+    }
+  ],
+  "location": {
+    "line": 1,
+    "column": 1
+  },
+  "span": {
+    "start": 0,
+    "end": 775
+  }
+}

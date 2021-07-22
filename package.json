@@ -1,0 +1,15 @@
+{
+  "name": "email-demo",
+  "version": "1.0.0",
+  "description": "Welcome to your new Superface project.",
+  "main": "demo.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@superfaceai/one-sdk": "0.0.29-beta.5",
+    "dotenv": "^10.0.0"
+  }
+}
